@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Calculator</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="calculator">
+
+    <label for="num1">Number 1</label>
+    <input type="text" inputmode="decimal" id="num1">
+
+    <label>Operator</label>
+    <div class="operators">
+      <button class="op-btn" data-op="+">+</button>
+      <button class="op-btn" data-op="-">−</button>
+      <button class="op-btn" data-op="*">×</button>
+      <button class="op-btn" data-op="/">÷</button>
+    </div>
+
+    <label for="num2">Number 2</label>
+    <input type="text" inputmode="decimal" id="num2">
+
+    <div class="actions">
+      <button id="equals-btn">=</button>
+      <button id="reset-btn">Reset</button>
+    </div>
+
+    <label>Result</label>
+    <div id="result">0</div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>

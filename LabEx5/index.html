@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>News</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Latest News</h1>
+
+  <!--Template for a single news card -->
+  <template id="news-template">
+    <div class="news-card">
+      <div class="news-title"></div>
+      <div class="news-content"></div>
+    </div>
+  </template>
+
+  <!--News items get inserted here -->
+  <div id="news-list"></div>
+
+  
+  <h2>Add News Item</h2>
+  <label for="title-input">News Item Title:</label>
+  <input type="text" id="title-input">
+
+  <label for="content-input">News Item Content:</label>
+  <input type="text" id="content-input">
+
+  <button id="add-news-btn">Add News Item</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
