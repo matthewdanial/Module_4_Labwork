@@ -22,7 +22,7 @@
 </head>
 <body>
 
-    <!-- Template for a single card - stays hidden until cloned by JS -->
+
     <template id="card-template">
         <div class="card">
             <div class="card-body">
@@ -36,28 +36,28 @@
     <div id="card-list"></div>
 
     <script>
-        // Part 1: addCard now accepts parameters instead of hard-coded text
+        
         function addCard(title, text) {
             // clone the template
             const template = document.getElementById("card-template")
                 .content.cloneNode(true);
 
-            // populate the template using the values passed in
+            
             template.querySelector('.card-title').innerText = title;
             template.querySelector('.card-text').innerText = text;
 
-            // include the populated template into the page
+            
             document.querySelector('#card-list')
                 .appendChild(template);
         }
 
-        // Part 2: data array to loop through
+        
         const data = [
             { name: 'bob', age: 23 },
             { name: 'alice', age: 39 }
         ];
 
-        // Loop through the array and create one card per person
+
         data.forEach(person => {
             addCard(person.name, "Age: " + person.age);
         });
