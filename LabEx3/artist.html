@@ -42,7 +42,7 @@
 
     <div class="artist-name" id="artist-name"></div>
 
-    <!-- Different template to Exercise 2 - shows an image, not just text -->
+    
     <template id="portfolio-template">
         <div class="portfolio-card">
             <img class="portfolio-image" src="" alt="">
@@ -53,7 +53,7 @@
     <div class="portfolio-list" id="portfolio-list"></div>
 
     <script>
-        // The artist data provided on the slide
+        
         const artist = {
             name: "Van Gogh",
             portfolio: [
@@ -62,26 +62,26 @@
             ]
         };
 
-        // Function to add one portfolio card, using the new template
+        
         function addPortfolioCard(title, imageUrl) {
-            // clone the template
+            
             const template = document.getElementById("portfolio-template")
                 .content.cloneNode(true);
 
-            // populate the template
+            
             template.querySelector('.portfolio-image').src = imageUrl;
             template.querySelector('.portfolio-image').alt = title;
             template.querySelector('.portfolio-title').innerText = title;
 
-            // add it to the page
+            
             document.querySelector('#portfolio-list')
                 .appendChild(template);
         }
 
-        // Show the artist's name at the top
+       
         document.getElementById("artist-name").innerText = artist.name;
 
-        // Loop through the artist's portfolio and create a card for each piece
+       
         artist.portfolio.forEach(item => {
             addPortfolioCard(item.title, item.url);
         });
