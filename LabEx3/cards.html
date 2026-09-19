@@ -22,7 +22,7 @@
 </head>
 <body>
 
-    
+
     <template id="card-template">
         <div class="card">
             <div class="card-body">
@@ -32,13 +32,13 @@
         </div>
     </template>
 
-   
+    <!-- Cards get inserted here -->
     <div id="card-list"></div>
 
     <script>
-      
+        
         function addCard(title, text) {
-            
+            // clone the template
             const template = document.getElementById("card-template")
                 .content.cloneNode(true);
 
@@ -46,7 +46,7 @@
             template.querySelector('.card-title').innerText = title;
             template.querySelector('.card-text').innerText = text;
 
-           
+            
             document.querySelector('#card-list')
                 .appendChild(template);
         }
@@ -57,7 +57,7 @@
             { name: 'alice', age: 39 }
         ];
 
-        
+
         data.forEach(person => {
             addCard(person.name, "Age: " + person.age);
         });
